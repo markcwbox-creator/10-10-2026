@@ -1,0 +1,28 @@
+MYSTERY SOLUTION LAB - CLASS DATA ANALYSIS (n=43 groups)
+% change = (final - initial)/|initial| x 100, recomputed from raw masses for every cell.
+
+Class mean % mass change, SD, SEM
+Color      Mean    SD     SEM    [sucrose] (inferred)
+Clear       3.74   7.74   1.18   0 M
+Violet     11.85   7.48   1.14   0.2 M
+Cerulean   17.53   4.93   0.75   0.4 M
+Salmon     25.37   6.02   0.92   0.6 M
+Yellow     29.68  13.10   2.00   0.8 M
+Hunter Grn 34.85   8.18   1.25   1.0 M
+Unknown    17.89   6.90   1.05   ?
+
+Best fit (mean % change vs [sucrose]): y = 30.98x + 5.01, R^2 = 0.990
+Unknown [sucrose] = (17.89 - 5.01)/30.98 = 0.42 M  (between Cerulean and Salmon, closest to Cerulean 0.4 M)
+Sample calc (Salmon, Emelyn K./Amogh N.): (15.6-11.39)/11.39 x 100 = 36.96%
+
+ASSUMPTIONS
+- Colors were not matched to concentrations in the materials; assignment above is ranked by mean % change (higher sucrose -> more water in -> more mass gain).
+- % Error cannot be computed: the true unknown concentration is not given.
+
+DATA PROBLEMS IN THE SHEET (my numbers use recomputed values)
+- Craun A3 "Mason, Kylie, and Eliana": every % cell is wrong (e.g. Salmon 2.8 vs 24.56 from masses).
+- Potts A3 "Olivia, Shar" Green: 54.57 listed, 40.71 from masses.
+- Craun A1 Sahitya/Mallory Violet: 10.66 listed, 6.83 computed. Others minor/sign errors on Clear (e.g. +0.952 listed, -0.95 computed).
+- Outliers left in: Wright A3 Serena/Nidhish/Daniel (Clear -22.43, Yellow -5.93; likely leaked tubing), Wright A3 Aayan/Beeraj/Kaylynn (initial masses 7.8-9.9 g, Yellow +93.6%). These inflate SD for Clear and Yellow.
+
+NOT DONE: graphs, hypothesis/IV/DV, statistical test (H0/Ha, P, CV, chi-square, df, alpha) - see questions.
