@@ -1,0 +1,52 @@
+CLASS DATA - NOTEBOOK ENTRIES (n = 43 groups; % change recomputed from raw masses)
+
+2. CLASS MEAN % MASS CHANGE, SD, SEM   (SEM = SD / sqrt(43))
+Color        [sucrose]*  Mean    SD     SEM    CV (%)
+Clear        0 M          3.74    7.74   1.18   207.3
+Violet       0.2 M       11.85    7.48   1.14    63.1
+Cerulean     0.4 M       17.53    4.93   0.75    28.1
+Salmon       0.6 M       25.37    6.02   0.92    23.7
+Yellow       0.8 M       29.68   13.10   2.00    44.1
+Hunter Green 1.0 M       34.85    8.18   1.25    23.5
+Unknown      ?           17.89    6.90   1.05    38.6
+*Assigned by ranking mean % change (higher sucrose -> more water in -> more mass gain). Confirm with your teacher.
+
+SAMPLE CALCULATIONS (Salmon column)
+ % change, one group (Emelyn K./Amogh N.): (15.60 - 11.39)/11.39 x 100 = +36.96%
+ Mean = (sum of the 43 groups' % changes)/43 = 25.37%
+ SD = sqrt[ sum(x - mean)^2 / (43 - 1) ] = 6.02
+ SEM = 6.02 / sqrt(43) = 6.02 / 6.56 = 0.92
+ CV = SD/mean x 100 = 6.02/25.37 x 100 = 23.7%
+
+3. [SUCROSE] OF EACH COLOR: see table above (best-fit line below supports the ranking).
+
+4. GRAPH: class_graph.png (mean % change vs [sucrose], SEM error bars, best-fit line).
+ Best fit: y = 30.98x + 5.01, R^2 = 0.990  (x = molarity, y = mean % change)
+
+5. [SUCROSE] OF THE UNKNOWN
+ x = (y - b)/m = (17.89 - 5.01)/30.98 = 12.88/30.98 = 0.42 M
+
+6. % ERROR
+ % error = |experimental - true| / true x 100
+ True value not known, so leave blank/ask teacher. Illustration only, IF true = 0.4 M: |0.42 - 0.40|/0.40 x 100 = 4%.
+ (Unknown vs Cerulean 0.4 M: Welch t-test P = 0.78, not significantly different.)
+
+7. STATISTICAL ANALYSIS
+ H0: Sucrose concentration has no effect on % mass change (all solutions have the same mean % change).
+ Ha: Sucrose concentration affects % mass change (at least one differs).
+ alpha = 0.05, df = (6 solutions - 1) = 5, critical X^2 = 11.07
+ Chi-square (O = class mean % change, E = average of the 6 means = 20.50):
+  X^2 = sum (O-E)^2/E
+   Clear   (3.74-20.50)^2/20.50  = 13.70
+   Violet  (11.85-20.50)^2/20.50 =  3.65
+   Cerulean(17.53-20.50)^2/20.50 =  0.43
+   Salmon  (25.37-20.50)^2/20.50 =  1.16
+   Yellow  (29.68-20.50)^2/20.50 =  4.11
+   Green   (34.85-20.50)^2/20.50 = 10.04
+   X^2 = 33.09 > 11.07, P = 3.6e-6 < 0.05
+ Conclusion: reject H0. Sucrose concentration significantly affects % mass change.
+ Cross-check, one-way ANOVA across the 6 known solutions: F = 84.3, P < 0.001 (same conclusion).
+ Regression: slope P = 3.5e-5, R^2 = 0.990 (strong positive linear relationship).
+ CV: smaller for Salmon/Green/Cerulean (~24-28%), very large for Clear (207%) because its mean is near 0 and outliers exist.
+
+CAVEATS: Outliers kept (Serena/Nidhish/Daniel Clear -22.43%, Yellow -5.93%; Aayan/Beeraj/Kaylynn Yellow +93.6%). Excluding them would shrink SD for Clear and Yellow. Teacher may expect different chi-square expected values; check.
